@@ -1,0 +1,28 @@
+<div *ngIf="employee">
+  <div>
+    <label>Name: </label> {{employee.firstName}}
+  </div>
+  <div>
+    <label>Name: </label> {{employee.lastName}}
+  </div>
+  <div>
+    <label>Gender: </label> {{employee.gender}}
+  </div>
+  <div>
+    <label>Date of Birth: </label> {{employee.dateOfBirth}}
+    </div>
+  <div>
+    <label>Department: </label> {{employee.department}}
+    </div>
+  <div>
+    <label>Active: </label> {{employee.active}}
+  </div>
+
+  <span class="button is-small btn-primary" *ngIf='employee.active' (click)='updateActive(false)'>Inactive</span>
+
+  <span class="button is-small btn-primary" *ngIf='!employee.active' (click)='updateActive(true)'>Active</span>
+
+  <span class="button is-small btn-danger" (click)='deleteEmployee()'>Delete</span>
+
+  <hr/>
+</div>
